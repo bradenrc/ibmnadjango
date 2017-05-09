@@ -1,0 +1,59 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block body %}
+
+{% load render_table from django_tables2 %}
+
+    <h1>Submit Recomendation for: </h1>
+
+
+    <div class="table-container">
+        <table class="table table-bordered table-striped table-hover">
+
+            <form method="POST" class="post-form">
+                {% csrf_token %}
+            {{ form.as_table }}
+
+        </table>
+                <button type="submit" class="save btn btn-default">Submit</button>
+            </form>
+    </div>
+
+
+    <p/>
+
+<h3>More Results:</h3>
+
+<script type="text/javascript">
+
+var table1 = {
+   summarized: false,
+   names: ['Amnt', 'Type'],
+   options: ['numeric', 'string'],
+   rows: {{ sumres|safe }}
+};
+
+
+//For the Size of the Chart
+var tt = '{{ tcount|safe }}';
+console.log(tt);
+
+</script>
+
+<div align="center">
+<svg id="visualization" width="375" height="375"></svg>
+</div>
+
+
+<script src="{% static '/scripts/piechart.js' %}"></script>
+
+
+
+
+
+        {% render_table people %}
+
+{% endblock %}
+
+

@@ -25,12 +25,22 @@ class Person(models.Model):
         ('tr', 'Trades'),
     )
 
+    age_c = []
+    for a in range(20, 70, 5):
+        age_c.append([a, a])
 
-    name_text = models.CharField(max_length=100)
+
+    name = models.CharField(max_length=100)
     gender = models.CharField(max_length=1, choices=gender_c)
     marital = models.CharField(max_length=1, choices=marital_c)
-    age = models.IntegerField()
+    age = models.IntegerField(choices=age_c)
     job = models.CharField(max_length=2, choices=job_c)
 
-class results(models.Model):
+    def __str__(self):
+        return self.name
+
+class camping_results(models.Model):
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    rawprediction = models.TextField()
+    product = models.CharField(max_length=30)
+    prediction = models.FloatField()
