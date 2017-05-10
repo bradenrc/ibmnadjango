@@ -8,9 +8,9 @@ There are three ways you can use this repository:
 
 2. Run Via the Docker Image posted to Docker:<Br>
 docker pull ibmsparkna/django<Br>
-docker run ibmsparkna/django<Br>
+docker run -p 8000:8000 ibmsparkna/django<Br>
 
 3. Build your own docker image, for example<Br>
 -clone repo<Br>
 -run: docker build -t tag/name .<Br>
--run image: docker run tag/name<Br>
+-run image: docker run -p 8000:8000 tag/name<Br>
