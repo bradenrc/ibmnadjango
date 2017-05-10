@@ -3,8 +3,8 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 from forms import CampingRecomendationForm
-from models import Person
-from .tables import PersonTable
+from models import Person, Demos
+from .tables import PersonTable, DemosTable
 from models import camping_results
 import urllib3, requests, json
 from django.db import connection
@@ -13,12 +13,21 @@ import app.apis
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
+
+
+    # demos = Demos.objects.all()
+    # demos_table = DemosTable(demos)
+    demos_table = DemosTable(Demos.objects.values("name", 'description', 'path'))
+
+    #print demos_table.rows()[0]
+
     return render(
         request,
         'app/index.html',
         {
             'title':'Home Page',
             'year':datetime.now().year,
+            'demos': demos_table,
         }
     )
 
@@ -71,6 +80,10 @@ def camping(request):
     sumres_list = []
     for c, v in sumres:
          sumres_list.append([c, v.encode("utf-8")])
+
+
+    print sumres_list
+    print tcount
 
     return render(request, 'app/camping.html', {'title': 'Camping',
                                                 'form': form,

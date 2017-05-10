@@ -1,1 +1,14 @@
 {% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block body %}
+
+{% load render_table from django_tables2 %}
+
+
+
+     {% render_table demos %}
+
+{% endblock %}
+
+
