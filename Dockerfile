@@ -1,4 +1,5 @@
-FROM python:2.7
+#FROM python:2.7
+FROM p7hb/docker-spark
 
 #Install Required Applications
 RUN apt-get update && apt-get install -y  unixodbc unixodbc-dev tdsodbc iodbc nano freetds-bin python2.7 python-pip python-dev
