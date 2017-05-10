@@ -2,9 +2,6 @@ import urllib3, json, requests
 
 from models import api_params
 
-
-
-
 def camping_predict_purchase(gender, age, marital, job):
     """Watson API Prediction for Camping Equipment
     example params could be:
