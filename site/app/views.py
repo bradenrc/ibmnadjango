@@ -8,6 +8,8 @@ from models import Person
 from .tables import PersonTable
 from models import camping_results
 import urllib3, requests, json, os
+from django.db import connection
+
 
 def home(request):
     """Renders the home page."""
@@ -51,19 +53,6 @@ def predict_purchase(gender, age, marital, job):
     return result
 
 
-#
-# class camping_results(models.Model):
-#     person = models.ForeignKey(Person, on_delete=models.CASCADE)
-#     rawprediction = models.CharField(max_length=2000)
-#     product = models.CharField(max_length=30)
-#     prediction = models.FloatField()
-
-
-from models import Person
-
-p = Person.objects.get(id=1)
-
-
 def camping(request):
     if request.method == "POST":
         form = CampingRecomendationForm(request.POST)
@@ -95,10 +84,19 @@ def camping(request):
     else:
         form = CampingRecomendationForm()
 
-    ptable = PersonTable(Person.objects.all())
+    ptable = PersonTable(Person.objects.values('name', 'gender', 'marital', 'age', 'job',
+                                               'camping_results__product', 'camping_results__prediction'))
 
-    sumres = [[10, 'test'], [10, 'test2'], [10, 'test3']]
-    tcount = 30
+    with connection.cursor() as cursor:
+        sumres = cursor.execute("select count(*) as pcount, product from app_camping_results group by product").fetchall()
+        tcount = cursor.execute("select count(*) from app_camping_results").fetchall()[0][0]
 
-    return render(request, 'app/camping.html', {'form': form, 'people': ptable, 'sumres': sumres, "tcount": tcount},
+    print tcount
+    print sumres
+
+    sumres_list = []
+    for c, v in sumres:
+         sumres_list.append([c, v.encode("utf-8")])
+
+    return render(request, 'app/camping.html', {'form': form, 'people': ptable, 'sumres': sumres_list, "tcount": tcount},
                   RequestContext(request, locals()))
