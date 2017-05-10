@@ -44,3 +44,15 @@ class camping_results(models.Model):
     rawprediction = models.TextField()
     product = models.CharField(max_length=30)
     prediction = models.FloatField()
+
+
+
+class api_params(models.Model):
+    api_name = models.CharField(max_length=30, default='')
+    api_id = models.CharField(max_length=255, null=True)
+    version = models.CharField(max_length=255, null=True)
+    service_path = models.CharField(max_length=255, null=True)
+    username = models.CharField(max_length=255, null=True)
+    password = models.CharField(max_length=255, null=True)
+    endpoint = models.CharField(max_length=255, null=True)
+    notes = models.TextField(null=True)
