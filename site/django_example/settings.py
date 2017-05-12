@@ -14,7 +14,12 @@ SECRET_KEY = '3zu(mcw#=z)v_b57^h06hc@%ruzy#h0)0$ceb*p(+8lbvf1^*$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+#capture the allowed hosts from enviroment variable
+if os.getenv('allowedhosts'):
+    ALLOWED_HOSTS = [os.getenv('allowedhosts')]
+else
+    ALLOWED_HOSTS = []
 
 
 # Application definition
