@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y  unixodbc unixodbc-dev tdsodbc iodbc na
 #Copy over the DJANGO Site Code
 RUN mkdir /site
 WORKDIR /site
-ADD site/. /site/
+ADD demo/. /site/
 RUN pip install -r requirements.txt
 
 EXPOSE 8000

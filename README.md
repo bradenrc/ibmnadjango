@@ -2,7 +2,7 @@ There are three ways you can use this repository:
 
 1. run the django site local:<Br>
 -clone the repo<Br>
--in terminal go to site<Br>
+-in terminal go to /demo<Br>
 -python -m pip install -r requirements.txt<Br>
 -python manage.py runserver<Br>
 

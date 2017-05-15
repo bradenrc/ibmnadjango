@@ -2,11 +2,159 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ce6459-f662-475a-b51d-afa7b0b40c2f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/site/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/db.sqlite3" afterPath="$PROJECT_DIR$/site/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ibmnadjango.iml" afterPath="$PROJECT_DIR$/.idea/ibmnadjango.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_444444_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_454545_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_555555_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_777620_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_777777_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_888888_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_cc0000_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/images/IBM-Watson-image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/images/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/images/watson.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/Procfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/apis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/forms.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0002_auto_20170509_2159.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0003_auto_20170509_2225.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0004_auto_20170509_2234.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0005_api_params.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0006_api_params_api_name.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0007_api_params_service_path.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0008_auto_20170510_1606.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0009_auto_20170510_2157.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0010_demos_path.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/pqgrid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/accordion.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/all.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/autocomplete.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/button.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/draggable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/menu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/progressbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/resizable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/selectable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/selectmenu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/sortable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/spinner.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/tabs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/content/themes/base/tooltip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/static/scripts/piechart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/tables.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/templates/app/camping.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/templates/app/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/templates/app/layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/requirements.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/run.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/apis.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/apps.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0002_auto_20170509_2159.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0003_auto_20170509_2225.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0004_auto_20170509_2234.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0005_api_params.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0006_api_params_api_name.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0007_api_params_service_path.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/0008_auto_20170510_1606.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/pqgrid.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/accordion.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/all.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/autocomplete.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/button.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/core.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/draggable.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_444444_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_555555_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_777620_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_777777_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_cc0000_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/images/ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/jquery-ui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/progressbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/resizable.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/selectable.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/selectmenu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/slider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/sortable.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/spinner.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/content/themes/base/tooltip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/images/IBM-Watson-image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/images/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/images/watson.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/static/scripts/piechart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/tables.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/templates/app/camping.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/templates/app/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/templates/app/layout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/app/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/db.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/django_example/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/django_example/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/django_example/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/django_example/wsgi.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/manage.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site/requirements.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/django_example/settings.py" afterPath="$PROJECT_DIR$/site/django_example/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,15 +177,13 @@
     <favorites_list name="ibmnadjango" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/site/django_example/settings.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="run.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,7 +213,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Docker" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/site/app/templates/app/index.html" />
         <option value="$PROJECT_DIR$/site/app/apps.py" />
         <option value="$PROJECT_DIR$/site/django_example/urls.py" />
@@ -83,6 +228,9 @@
         <option value="$PROJECT_DIR$/site/requirements.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/site/django_example/settings.py" />
+        <option value="$PROJECT_DIR$/demo/demo/urls.py" />
+        <option value="$PROJECT_DIR$/demo/demo/settings.py" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
       </list>
     </option>
   </component>
@@ -126,38 +274,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibmnadjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibmnadjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibmnadjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibmnadjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django_example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -179,15 +295,16 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo" />
+      <recent name="$PROJECT_DIR$/site/app/static/content" />
+      <recent name="$PROJECT_DIR$/site/app/templates/app" />
+      <recent name="$PROJECT_DIR$/site/app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/site/app/static/images" />
       <recent name="$PROJECT_DIR$/site/app/static/content" />
       <recent name="$PROJECT_DIR$/site/app/static/scripts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/site/app/static/content" />
-      <recent name="$PROJECT_DIR$/site/app/templates/app" />
-      <recent name="$PROJECT_DIR$/site/app" />
     </key>
   </component>
   <component name="RunManager" selected="Docker Deployment.Docker Deployment">
@@ -539,22 +656,29 @@
       <option name="project" value="LOCAL" />
       <updated>1494458917266</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixing allowed hosts to accept enviroment variable to run on bluemix">
+      <created>1494617911226</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1494617911226</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="973" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26434678" sideWeight="0.86561954" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26739928" sideWeight="0.86561954" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23274854" sideWeight="0.497558" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23274854" sideWeight="0.497558" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31929824" sideWeight="0.504884" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15438597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15438597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25380117" sideWeight="0.495116" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45847952" sideWeight="0.495116" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25702077" sideWeight="0.13438046" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -583,7 +707,8 @@
     <MESSAGE value="Fixing requirements" />
     <MESSAGE value="Edit readme for options" />
     <MESSAGE value="Added front page, models to capture demo and technologies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added front page, models to capture demo and technologies" />
+    <MESSAGE value="Fixing allowed hosts to accept enviroment variable to run on bluemix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing allowed hosts to accept enviroment variable to run on bluemix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -592,6 +717,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/site/django_example/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/site/app/templates/app/camping.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -603,9 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,9 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,9 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="25" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,9 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="51" column="79" lean-forward="false" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -672,9 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,9 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,9 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,13 +886,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -818,13 +923,6 @@
     <entry file="file://$PROJECT_DIR$/site/app/static/images/watson.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/django_example/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site/app/forms.py">
@@ -866,9 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,9 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="50" column="4" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="57" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,9 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,9 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="584">
           <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,9 +992,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -929,11 +1013,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site/django_example/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/demo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/demo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#638#670#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/django_example/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
