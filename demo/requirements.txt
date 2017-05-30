@@ -1,3 +1,10 @@
 Django==1.10.6
 django-tables2
 urllib3
+requests
+channels
+routing
+asgi_redis
+websocket
+websocket-client
+requests

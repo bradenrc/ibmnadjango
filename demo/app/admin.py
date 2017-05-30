@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Person, camping_results, api_params, Technologies, Demos
+from .models import Person, camping_results, ApiParameters, Technologies, Demos, SuperHeroFight
 
 
 # Register your models here.
@@ -14,7 +14,7 @@ class camping_resultsAdmin(admin.ModelAdmin):
     list_display = ('person', 'product', 'prediction')
 
 
-@admin.register(api_params)
+@admin.register(ApiParameters)
 class api_paramsAdmin(admin.ModelAdmin):
     list_display = ('api_name', 'api_id', 'username')
 
@@ -25,3 +25,7 @@ class TechnologiesAdmin(admin.ModelAdmin):
 @admin.register(Demos)
 class DemosAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
+
+@admin.register(SuperHeroFight)
+class SuperHeroFightAdmin(admin.ModelAdmin):
+    list_display = ('SuperHeroOne', 'SuperHeroTwo')

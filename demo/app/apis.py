@@ -1,6 +1,8 @@
-import urllib3, json, requests
+import urllib3, json
+import random
 
-from models import api_params
+from app.models import ApiParameters
+
 
 def camping_predict_purchase(gender, age, marital, job):
     """Watson API Prediction for Camping Equipment
@@ -11,7 +13,7 @@ def camping_predict_purchase(gender, age, marital, job):
     # job = "Executive"
     """
 
-    apip = api_params.objects.filter(api_name='camping_predict_purchase')[0]
+    apip = ApiParameters.objects.filter(api_name='camping_predict_purchase')[0]
     id = apip.api_id #"09171b0e-d473-4f0e-9d11-73bcd330ca67"
     version = apip.version #"https://ibm-watson-ml.mybluemix.net/v2/artifacts/models/09171b0e-d473-4f0e-9d11-73bcd330ca67/versions/7e684513-a525-4510-90d5-a87ba6d22ab7"
 
@@ -33,3 +35,13 @@ def camping_predict_purchase(gender, age, marital, job):
     response_scoring = requests.put(scoring_href, json=payload_scoring, headers=header_online)
     result = response_scoring.text
     return result
+
+
+
+def score_super_hero(hero):
+    return random.randrange(0,100)
+
+# def super_hero_fight_prediction(hero):
+#
+#     heros = SuperHeroFight.heros
+#     print heros[hero]

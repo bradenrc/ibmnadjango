@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from models import Person
-
+from models import SuperHeroFight
 
 
 class CampingRecomendationForm(ModelForm):
@@ -9,3 +9,13 @@ class CampingRecomendationForm(ModelForm):
         model = Person
         fields = '__all__'
 
+
+
+class SubmitForm(forms.Form):
+    test = forms.CharField(label='Test', max_length=100, required=False)
+
+
+class SuperHeroFightForm(ModelForm):
+    class Meta:
+        model = SuperHeroFight
+        fields = ["SuperHeroOne", "SuperHeroTwo"]

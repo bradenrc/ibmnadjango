@@ -1,0 +1,86 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block body %}
+
+
+    Hello form is: {{ clicked }}
+
+
+    <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+    </form>
+
+
+
+    <textarea rows="10" cols="50" id="ta"></textarea>
+
+    <svg id='visualization' width='600' height='200'></svg>
+    <div id='controls' class='brunel'/>
+    <script src="{% static '/scripts/streaming_intro.js' %}"></script>
+
+
+    <script type="text/javascript">
+
+        var ta = document.getElementById('ta');
+        var v = new BrunelVis('visualization');
+        var tmpdata = []
+
+
+        socket = new WebSocket("ws://" + window.location.host + "/chat/");
+        socket.onmessage = function (e) {
+
+            //console.log(e.data)
+
+            var cv = ta.value;
+            ta.value = e.data + "," + cv;
+
+
+            var dlabel = e.data.split(",")[0] //parseInt(e.data)
+            var dval = parseInt(e.data.split(",")[1]) //parseInt(e.data)
+
+            tmpdata.push(dlabel);
+
+
+            var data = tmpdata.reduce(function (allNames, name) {
+                if (name in allNames) {
+                    allNames[name]++;
+                }
+                else {
+                    allNames[name] = 1;
+                }
+                return allNames;
+            }, {});
+
+            //console.log(data);
+
+            var arr = Object.keys(data).map(function (key) { return [key, data[key]]; });
+
+            var table1 = {
+                summarized: true,
+                names: ['Region', 'Rain'],
+                options: ['string', 'numeric'],
+                rows: arr
+            };
+
+            //console.log(scale_y);
+            //console.log(v.charts[0].scales.y.valueOf())
+             //var scale_y = d3.scaleLinear().domain([0, 450.00004])
+              //    .range([geom.inner_height, 0]);
+
+            v.build(table1);
+
+        };
+
+
+    </script>
+
+
+
+
+
+{% endblock %}
+
+

@@ -2,34 +2,36 @@ from django.shortcuts import render, redirect
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
-from forms import CampingRecomendationForm
-from models import Person, Demos
-from .tables import PersonTable, DemosTable
+from forms import CampingRecomendationForm, SubmitForm, SuperHeroFightForm
+from models import Person, Demos, SuperHeroFight
+from .tables import PersonTable, DemosTable, SuperHeroTable
 from models import camping_results
 import urllib3, requests, json
 from django.db import connection
 import app.apis
+import subprocess
+
 
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
 
-
     # demos = Demos.objects.all()
     # demos_table = DemosTable(demos)
     demos_table = DemosTable(Demos.objects.values("name", 'description', 'path'))
 
-    #print demos_table.rows()[0]
+    # print demos_table.rows()[0]
 
     return render(
         request,
         'app/index.html',
         {
-            'title':'Home Page',
-            'year':datetime.now().year,
+            'title': 'Home Page',
+            'year': datetime.now().year,
             'demos': demos_table,
         }
     )
+
 
 def camping(request):
     if request.method == "POST":
@@ -45,15 +47,15 @@ def camping(request):
                 if k == post.job: j = v
 
             try:
-                #run prediction
+                # run prediction
                 pred = app.apis.camping_predict_purchase(post.gender, post.age, m, j)
 
-                #create new instance of camping_results entry
+                # create new instance of camping_results entry
                 cr = camping_results()
-                cr.person = post #the form submited a new person, set the results fk to person
-                cr.rawprediction = cr #store the returned blob
+                cr.person = post  # the form submited a new person, set the results fk to person
+                cr.rawprediction = cr  # store the returned blob
 
-                #convert results to json to grab specific values
+                # convert results to json to grab specific values
                 crj = json.loads(pred)
                 cr.product = crj["result"]["predictedLabel"]
                 cr.prediction = crj["result"]["prediction"]
@@ -71,16 +73,16 @@ def camping(request):
     ptable = PersonTable(Person.objects.values('name', 'gender', 'marital', 'age', 'job',
                                                'camping_results__product', 'camping_results__prediction'))
 
-    #grab the current list of predictions and the count of all predictions (for bound on chart)
+    # grab the current list of predictions and the count of all predictions (for bound on chart)
     with connection.cursor() as cursor:
-        sumres = cursor.execute("select count(*) as pcount, product from app_camping_results group by product").fetchall()
+        sumres = cursor.execute(
+            "select count(*) as pcount, product from app_camping_results group by product").fetchall()
         tcount = cursor.execute("select count(*) from app_camping_results").fetchall()[0][0]
 
-    #the chart wants very specific formating, easiest way is to convert to a list
+    # the chart wants very specific formating, easiest way is to convert to a list
     sumres_list = []
     for c, v in sumres:
-         sumres_list.append([c, v.encode("utf-8")])
-
+        sumres_list.append([c, v.encode("utf-8")])
 
     print sumres_list
     print tcount
@@ -90,4 +92,57 @@ def camping(request):
                                                 'people': ptable,
                                                 'sumres': sumres_list,
                                                 "tcount": tcount},
+                  RequestContext(request, locals()))
+
+
+def streaming_intro(request):
+    """Renders the home page."""
+    assert isinstance(request, HttpRequest)
+
+    clicked = "Not Submitted"
+
+    if request.method == "POST":
+        form = SubmitForm(request.POST)
+        if form.is_valid():
+            clicked = "Submitted"
+            # post = form.save(commit=False)
+            print clicked
+
+            r = subprocess.call("python ./app/util/load_random.py", shell=True)
+            print r
+
+            # return redirect('/streaming_intro')
+
+    return render(
+        request,
+        'app/streaming_intro.html',
+        {
+            'title': 'Streaming',
+            'clicked': clicked,
+            'form': SubmitForm
+
+        }
+    )
+
+
+def superhero(request):
+    if request.method == "POST":
+        form = SuperHeroFightForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+
+            post.heroone_score = app.apis.score_super_hero(post.SuperHeroOne)
+            post.herotwo_score = app.apis.score_super_hero(post.SuperHeroTwo)
+            post.save()
+
+            return redirect('/superhero', pk=post.pk)
+    else:
+        form = SuperHeroFightForm()
+
+    fights = SuperHeroTable(SuperHeroFight.objects.all())
+
+    return render(request, 'app/superhero.html', {'title': 'Superhero Fight!!',
+                                                  'form': form,
+                                                  'fights': fights,
+                                                  },
                   RequestContext(request, locals()))
