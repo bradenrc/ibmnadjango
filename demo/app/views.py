@@ -141,8 +141,62 @@ def superhero(request):
 
     fights = SuperHeroTable(SuperHeroFight.objects.all())
 
+    query = """SELECT
+                  (sum(win) * 1.0) /  count(*) as winratio,
+                  1 - ((sum(win) * 1.0) /  count(*)) as lossratio,
+                  sh
+                from
+                  (
+                SELECT
+                  SuperHeroOne as sh,
+                  CASE
+                    WHEN heroone_score > herotwo_score THEN 1
+                    ELSE 0
+                  END AS WIN
+                FROM
+                  app_superherofight
+
+                UNION ALL
+
+                SELECT
+                  SuperHeroTwo as sh,
+                  CASE
+                    WHEN heroone_score < herotwo_score THEN 1
+                    ELSE 0
+                  END AS WIN
+                FROM
+                  app_superherofight) t
+                group by sh
+                """
+
+    # grab the current list of predictions and the count of all predictions (for bound on chart)
+    with connection.cursor() as cursor:
+        sumres = cursor.execute(query).fetchall()
+
+    # the chart wants very specific formating, easiest way is to convert to a list
+    sumres_list = []
+    heros = []
+
+
+
+    for wr, lr, sh in sumres:
+        hname = str(SuperHeroFight.heroes[sh][1]).encode("utf-8")
+
+        heros.append(hname)
+        sumres_list.append([hname, lr, 'Loss'])
+        sumres_list.append([hname, wr, 'Win'])
+
+
+
+    #[['Hero1', 0.7, 'Loss'], ['Hero1', 0.3, 'Win'], ['Hero2', 0.75, 'Loss'],  ['Hero2', 0.25, 'Win'], ['Hero3', 0.9, 'Loss'], ['Hero3', 0.1, 'Win']]
+
+    print heros
+    print sumres_list
+
     return render(request, 'app/superhero.html', {'title': 'Superhero Fight!!',
                                                   'form': form,
                                                   'fights': fights,
+                                                  'sumres_list': sumres_list,
+                                                  'heros' : heros,
                                                   },
                   RequestContext(request, locals()))

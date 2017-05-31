@@ -76,6 +76,21 @@ class ApiParameters(models.Model):
     notes = models.TextField(null=True)
 
 
+class SuperHero(models.Model):
+    heroid = models.IntegerField()
+    hero = models.CharField(max_length=100)
+    Role = models.CharField(max_length=100)
+    Efficienyv = models.DecimalField(decimal_places=2, max_digits=5)
+    Mitigationv = models.DecimalField(decimal_places=2, max_digits=5)
+    Suportv = models.DecimalField(decimal_places=2, max_digits=5)
+    Ultimates = models.DecimalField(decimal_places=2, max_digits=5)
+    Scalingv = models.DecimalField(decimal_places=2, max_digits=5)
+    Productionv = models.DecimalField(decimal_places=2, max_digits=5)
+    Depthv = models.DecimalField(decimal_places=2, max_digits=5)
+    Funv = models.DecimalField(decimal_places=2, max_digits=5)
+    DE = models.DecimalField(decimal_places=2, max_digits=5)
+    Fights = models.DecimalField(decimal_places=2, max_digits=5)
+
 class SuperHeroFight(models.Model):
     heroes = [[0, 'Scarlet Witch'], [1, 'Jean Grey'], [2, 'Dr. Doom'], [3, 'Magik'], [4, 'Vision'],
               [5, 'Black Panther'],

@@ -1,49 +1,3 @@
-{% extends "app/layout.html" %}
-{% load staticfiles %}
-
-{% block body %}
-
-    {% load render_table from django_tables2 %}
-
-    <h1>Submit Recomendation for: </h1>
-
-
-    <div class="table-container">
-        <table class="table table-bordered table-striped table-hover">
-
-            <form method="POST" class="post-form">
-                {% csrf_token %}
-                {{ form.as_table }}
-
-        </table>
-        <button type="submit" class="save btn btn-default">Submit</button>
-        </form>
-    </div>
-
-
-    <p/>
-
-
-    <h3>Results:</h3>
-
-
-
-
-    <script type="text/javascript">
-
-
-    </script>
-
-
-
-
-
-    <div align="center">
-        <svg id="visualization" width="700" height="375"></svg>
-    </div>
-
-<script type="application/ecmascript">
-
 function  BrunelVis(visId) {
   "use strict";                                                                       // strict mode
   var datasets = [],                                      // array of datasets for the original data
@@ -90,7 +44,7 @@ function  BrunelVis(visId) {
     // Scales //////////////////////////////////////////////////////////////////////////////////////
 
     var scale_x = d3.scalePoint().padding(0.5)
-      .domain({{ heros|safe }})
+      .domain(['Hero1', 'Hero2', 'Hero3'])
       .range([0, geom.inner_width]);
     var scale_inner = d3.scaleLinear().domain([0,1])
       .range([-0.5, 0.5]);
@@ -309,23 +263,11 @@ var table1 = {
    summarized: true,
    names: ['Super_Hero', 'Pct', 'WL'],
    options: ['string', 'numeric', 'string'],
-   rows: {{ sumres_list|safe }}
+   rows: [['Hero1', 0.7, 'Loss'], ['Hero1', 0.3, 'Win'], ['Hero2', 0.75, 'Loss'],
+  ['Hero2', 0.25, 'Win'], ['Hero3', 0.9, 'Loss'], ['Hero3', 0.1, 'Win']]
 };
 
 // Call Code to Build the system ///////////////////////////////////////////////////////////////////
 
 var v  = new BrunelVis('visualization');
 v.build(table1);
-
-
-
-    </script>
-
-
-
-    {% render_table fights %}
-
-
-{% endblock %}
-
-
