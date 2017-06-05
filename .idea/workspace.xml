@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ce6459-f662-475a-b51d-afa7b0b40c2f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/get-started-python" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0011_auto_20170530_2229.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0012_superhero.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0013_auto_20170531_1658.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/app/migrations/0014_auto_20170531_1659.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/heros.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/db.sqlite3" afterPath="$PROJECT_DIR$/demo/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -765,7 +758,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496251057755</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Super Hero model and prediction">
+      <created>1496678693937</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1496678693937</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -834,7 +834,8 @@
     <MESSAGE value="Added front page, models to capture demo and technologies" />
     <MESSAGE value="Fixing allowed hosts to accept enviroment variable to run on bluemix" />
     <MESSAGE value="Changing folder structure, attempting to get working on bluemix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing folder structure, attempting to get working on bluemix" />
+    <MESSAGE value="Super Hero model and prediction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Super Hero model and prediction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
