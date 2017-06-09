@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^camping/', app.views.camping, name='camping'),
     url(r'^streaming_intro/', app.views.streaming_intro, name='streams'),
     url(r'^admin/', admin.site.urls),
-    url(r'^superhero/', app.views.superhero, name='superhero')
+    url(r'^superhero/', app.views.superhero, name='superhero'),
+    url(r'^superheroeh/', app.views.superheroeh, name='superheroeh')
 ]

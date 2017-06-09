@@ -19,3 +19,13 @@ class SuperHeroFightForm(ModelForm):
     class Meta:
         model = SuperHeroFight
         fields = ["SuperHeroOne", "SuperHeroTwo"]
+
+
+
+class SuperHeroFightFormEH(ModelForm):
+    class Meta:
+        model = SuperHeroFight
+
+        #duration = forms.IntegerField(label="this is a test")
+
+        fields = ["SuperHeroTwo", "home", "night", "observers", "duration"]

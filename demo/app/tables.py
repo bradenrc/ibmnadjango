@@ -19,6 +19,7 @@ class HtmlColumn(tables.Column):
 class DemosTable(tables.Table):
     path = tables.URLColumn()
     description = HtmlColumn()
+
     class Meta:
         model = Demos
         fields = {'name', 'description', 'path'}
@@ -27,18 +28,21 @@ class DemosTable(tables.Table):
         attrs = {'class': 'table table-bordered table-striped table-hover'}
 
 
-
 class SuperHeroTable(tables.Table):
-
     heroone_score = tables.Column("Score")
     herotwo_score = tables.Column("Score")
 
+
     def render_winner(self, value):
-        return SuperHeroFight.heroes[value][1]
+
+        if value == "tie" or value == 'na':
+            return value
+        else:
+            return SuperHeroFight.heroes[value][1]
 
     class Meta:
         model = SuperHeroFight
-        fields = {'SuperHeroOne', 'heroone_score', 'SuperHeroTwo', 'herotwo_score', 'winner'}
-        sequence = ('SuperHeroOne', 'heroone_score', 'SuperHeroTwo', 'herotwo_score', 'winner')
+        fields = {'id', 'SuperHeroOne', 'heroone_score', 'SuperHeroTwo', 'herotwo_score', 'winner'}
+        sequence = ('id', 'SuperHeroOne', 'heroone_score', 'SuperHeroTwo', 'herotwo_score', 'winner')
         template = 'django_tables2/bootstrap.html'
         attrs = {'class': 'table table-bordered table-striped table-hover'}

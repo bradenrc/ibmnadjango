@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Technologies(models.Model):
@@ -91,6 +92,7 @@ class SuperHero(models.Model):
     DE = models.DecimalField(decimal_places=2, max_digits=5)
     Fights = models.DecimalField(decimal_places=2, max_digits=5)
 
+
 class SuperHeroFight(models.Model):
     heroes = [[0, 'Scarlet Witch'], [1, 'Jean Grey'], [2, 'Dr. Doom'], [3, 'Magik'], [4, 'Vision'],
               [5, 'Black Panther'],
@@ -104,10 +106,15 @@ class SuperHeroFight(models.Model):
               [43, 'Emma Frost'], [44, 'Wolverine'], [45, 'Luke Cage'], [46, 'Daredevil'], [47, 'X23'], [48, 'Magneto'],
               [49, 'Nightcrawler'], [50, 'Colossus'], [51, 'Starlord'], [52, 'Squirrel Girl'], [53, 'Deadpool']]
 
-    SuperHeroOne = models.IntegerField(name="SuperHeroOne", choices=heroes)
+    SuperHeroOne = models.IntegerField(name="SuperHeroOne", choices=heroes, verbose_name="Superhero One")
     heroone_score = models.DecimalField(decimal_places=5, max_digits=10, null=True, blank=True)
-    SuperHeroTwo = models.IntegerField(name="SuperHeroTwo", choices=heroes)
+    SuperHeroTwo = models.IntegerField(name="SuperHeroTwo", choices=heroes, verbose_name="Superhero Two")
     herotwo_score = models.DecimalField(decimal_places=5, max_digits=10, null=True, blank=True)
+
+    home = models.BooleanField(default=False)
+    night = models.BooleanField(default=False)
+    duration = models.IntegerField(null=True, blank=True)
+    observers = models.IntegerField(null=True, blank=True)
 
     def get_winner(self):
         if self.heroone_score > self.herotwo_score:

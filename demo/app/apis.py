@@ -4,6 +4,8 @@ import requests
 import json
 
 from app.models import ApiParameters, SuperHero
+import math
+import decimal
 
 
 def camping_predict_purchase(gender, age, marital, job):
@@ -39,7 +41,40 @@ def camping_predict_purchase(gender, age, marital, job):
     return result
 
 
-def score_super_hero(hero):
+# def score_super_hero(hero):
+#     sh = SuperHero.objects.get(heroid=hero)
+#
+#     Hero = sh.heroid
+#     Efficienyv = sh.Efficienyv
+#     Mitigationv = sh.Mitigationv
+#     Suportv = sh.Suportv
+#     Ultimates = sh.Ultimates
+#     Scalingv = sh.Scalingv
+#     Productionv = sh.Productionv
+#     Depthv = sh.Depthv
+#     Funv = sh.Funv
+#     DE = sh.DE
+#     Fights = int(sh.Fights)
+#
+#     url = "https://heroscore.mybluemix.net/score?Hero={}&Efficiencyv={}&Mitigationv={}&Supportv={}&Ultimatev={}&Scalingv={}&Productionv={}&Depthv={}&Funv={}&DEv={}&Fights={}".format(
+#         Hero,
+#         Efficienyv,
+#         Mitigationv,
+#         Suportv,
+#         Ultimates,
+#         Scalingv,
+#         Productionv,
+#         Depthv,
+#         Funv,
+#         DE,
+#         Fights
+#         )
+#
+#     r = requests.get(url)
+#     r_json = json.loads(r.text)
+#     return  r_json["results"][0]["Score"]
+
+def score_super_hero(hero, observers, home, night, duration):
     sh = SuperHero.objects.get(heroid=hero)
 
     Hero = sh.heroid
@@ -53,26 +88,64 @@ def score_super_hero(hero):
     Funv = sh.Funv
     DE = sh.DE
     Fights = int(sh.Fights)
+    role = sh.Role
 
-    url = "https://heroscore.mybluemix.net/score?Hero={}&Efficiencyv={}&Mitigationv={}&Supportv={}&Ultimatev={}&Scalingv={}&Productionv={}&Depthv={}&Funv={}&DEv={}&Fights={}".format(
-        Hero,
-        Efficienyv,
-        Mitigationv,
-        Suportv,
-        Ultimates,
-        Scalingv,
-        Productionv,
-        Depthv,
-        Funv,
-        DE,
-        Fights
-        )
 
-    r = requests.get(url)
-    r_json = json.loads(r.text)
-    return  r_json["results"][0]["Score"]
+    cos = observers
+    duration_val = duration
 
-# def super_hero_fight_prediction(hero):
-#
-#     heros = SuperHeroFight.heros
-#     print heros[hero]
+    if home:
+        ht = 1
+    else:
+        ht = 0
+
+    if night:
+        dtfight = 0
+    else:
+        dtfight = 1
+
+    eb = 1
+
+
+
+    form_citizen_observers = decimal.Decimal(-0.0000001826)
+    form_duration = decimal.Decimal(0.002169)
+    form_home_turf = decimal.Decimal(-0.2956)
+    form_hero_villian = decimal.Decimal(-1.098)
+    form_daytime_fight = decimal.Decimal(-0.1871)
+    form_extended_battle = decimal.Decimal(0.5708)
+
+    form_Efficienyv = decimal.Decimal(15.83)
+    form_Mitigationv = decimal.Decimal(-16.77)
+    form_Suportv = decimal.Decimal(15.1)
+    form_Ultimates = decimal.Decimal(-50.83)
+    form_Scalingv = decimal.Decimal(40.33)
+    form_Productionv = decimal.Decimal(-10.09)
+    form_Depthv = decimal.Decimal(3.08)
+    form_Funv = decimal.Decimal(-6.668)
+    form_DE = decimal.Decimal(4.269)
+    form_Fights = decimal.Decimal(-18.11)
+
+    # Role:
+    role_d = {
+        "Bruiser": decimal.Decimal(-143.6),
+        "Controller": decimal.Decimal(-70),
+        "Destroyer": decimal.Decimal(-90.05),
+        "Dominator": decimal.Decimal(-220.9),
+        "Doominator": decimal.Decimal(-196.4),
+        "Fighter": decimal.Decimal(-215.6),
+        "Leader": decimal.Decimal(-199.9),
+        "Nuker": decimal.Decimal(-281.5),
+        "Saboteur": decimal.Decimal(-166.3),
+        "Skirmisher": decimal.Decimal(-170.2),
+        "Summoner": decimal.Decimal(-204.4)
+    }
+
+    exps_v1 = (form_citizen_observers * cos) + (form_duration * duration_val) + (form_home_turf * ht) + \
+              (form_daytime_fight * dtfight) + (form_extended_battle * eb) + (form_Efficienyv * Efficienyv) + \
+              (form_Mitigationv * Mitigationv) + (form_Suportv * Suportv) + (form_Ultimates * Ultimates)  + \
+              (form_Scalingv * Scalingv) + (form_Productionv * Productionv) + (form_Depthv * Depthv)  + \
+              (form_Funv * Funv) + (form_DE * DE) + (form_Fights * Fights) + (role_d[role]) + decimal.Decimal(720.1)
+
+    score = math.exp(exps_v1) / (1 + math.exp(exps_v1))
+    return score
